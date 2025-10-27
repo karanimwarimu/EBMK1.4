@@ -1,0 +1,41 @@
+<div class="table-container">
+  <div class="filters">
+    <label>Date Filters</label>
+    <input type="date" id="fromDate">
+    <input type="date" id="toDate">
+    <input type="text" id="search" placeholder="Search...">
+  </div>
+
+  <table id="customerTable">
+    <thead>
+      <tr>
+        <th>Action</th>
+        <th>Customer ID</th>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Amount</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><button class="view-btn" onclick="loadContent(this, 'customer_view')">🔍 View</button></td>
+        <td>CCIN000388</td>
+        <td>Bathlomew Oketch</td>
+        <td>254722448694</td>
+        <td>10000</td>
+      </tr>
+      <tr>
+        <td><button class="view-btn" onclick="loadContent(this, 'customer_view')">🔍 View</button></td>
+        <td>CCIN000401</td>
+        <td>Derrick Nyaga Njeru</td>
+        <td>254728442080</td>
+        <td>20000</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="table-footer">
+    <button onclick="loadContent(this, 'customer_add')">➕ Add New</button>
+    <button>📥 Import</button>
+  </div>
+</div>

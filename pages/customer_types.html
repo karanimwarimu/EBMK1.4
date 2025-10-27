@@ -1,0 +1,77 @@
+<link rel="stylesheet" href="../css/create_customer.css">
+
+<div id="customer-types">
+  <h3>Customer Types</h3>
+
+  <!-- USERS TABLE -->
+  <table id="user-table">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Type</th>
+        <th>Phone</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>John Doe</td>
+        <td>Individual</td>
+        <td>0700 123 456</td>
+        <td>
+          <button class="view-btn" onclick="openUserForm('John Doe')">View/Edit</button>
+        </td>
+      </tr>
+      <tr>
+        <td>Jane Smith</td>
+        <td>Corporate</td>
+        <td>0711 987 654</td>
+        <td>
+          <button class="view-btn" onclick="openUserForm('Jane Smith')">View/Edit</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- ADD NEW BUTTON -->
+  <div class="btn-container">
+    <button id="add-user-btn" onclick="openUserForm()">+ Add New User</button>
+  </div>
+</div>
+
+<!-- USER FORM (Hidden by default) -->
+<div id="user-form-container" class="hidden">
+  <div class="form-header">
+    <h3>Individual Information File - New</h3>
+    <button onclick="closeUserForm()">×</button>
+  </div>
+
+  <form id="user-form">
+    <label>Main Name:</label>
+    <input type="text" placeholder="Search here">
+
+    <label>ID/PPT/Reg No:</label>
+    <input type="text" placeholder="Required Field">
+
+    <label>Phone No:</label>
+    <input type="text" placeholder="Required Field">
+
+    <label>Email:</label>
+    <input type="email" placeholder="Enter Email">
+
+    <label>Gender:</label>
+    <select>
+      <option>Male</option>
+      <option>Female</option>
+    </select>
+
+    <label>Reg/DOB:</label>
+    <input type="date">
+
+    <button type="submit">Save</button>
+    <button type="button" onclick="closeUserForm()" class="cancel">Cancel</button>
+  </form>
+</div>
+
+<script src="../js/create_users.js"></script>
+

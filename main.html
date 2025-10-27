@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>STATIM - Operations Menu</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+<script src="https://unpkg.com/lucide@latest"></script>
+<link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+<header id="header">
+  <h1 class="header-title"><span>MK1.4/span> OPERATIONS</h1>
+</header>
+
+<div id="app-body">
+  <nav class="sidebar">
+    <div class="menu-title">Operations Menu</div>
+
+    <div class="nav-item" onclick="toggleSub(this)">
+      <div class="item-icon"></div>Customer Management
+      <i data-lucide="chevron-right"></i>
+    </div>
+    <div class="submenu">
+      <div class="sub-link" onclick="loadContent(this,'Customer Types')">Customer Types</div>
+      <div class="sub-link" onclick="loadContent(this,'customers/Customer Individuals')">Customer (Individuals)</div>
+      <div class="sub-link" onclick="loadContent(this,'Funds Products List')">Funds Products Lists</div>
+      <div class="sub-link" onclick="loadContent(this,'General Customer Setup')">General Customer Setup</div>
+    </div>
+
+    <div class="nav-item" onclick="loadContent(this,'Loan Management')">
+      <div class="item-icon"></div>Loan Management
+    </div>
+    <div class="nav-item" onclick="loadContent(this,'Cashbook')">
+      <div class="item-icon"></div>Cashbook
+    </div>
+    <div class="nav-item" onclick="loadContent(this,'Accounts')">
+      <div class="item-icon"></div>Accounts
+    </div>
+    <div class="nav-item" onclick="loadContent(this,'Communication')">
+      <div class="item-icon"></div>Communication
+    </div>
+    <div class="nav-item" onclick="loadContent(this,'Custom')">
+      <div class="item-icon"></div>Custom
+    </div>
+    <div class="nav-item" onclick="loadContent(this,'Work Tracker')">
+      <div class="item-icon"></div>Work Tracker
+    </div>
+  </nav>
+
+  <main class="content-area">
+    <h2 id="content-title">Operations Dashboard</h2>
+    <p id="content-body">Select a menu item from the sidebar to load its module.</p>
+  </main>
+</div>
+
+<script src="js/main.js"></script>
+<script src="/js/customers/customer-individual.js"></script>
+</body>
+</html>

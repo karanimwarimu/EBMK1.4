@@ -1,0 +1,34 @@
+.customer-view {
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+  background: #fff;
+  border-radius: 10px;
+  max-width: 500px;
+}
+
+.details p {
+  margin: 10px 0;
+  font-size: 15px;
+}
+
+.actions {
+  margin-top: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.actions button {
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.actions button:first-child {
+  background-color: #007bff;
+  color: white;
+}
+
+.actions button:last-child {
+  background-color: #ccc;
+}

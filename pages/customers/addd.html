@@ -1,0 +1,29 @@
+<link rel="stylesheet" href="css/customers/add.css">
+
+<div class="customer-add" >
+  <h3>Add New Customer</h3>
+
+  <form id="addCustomerForm">
+    <label>Name</label>
+    <input type="text" placeholder="Enter name" required>
+
+    <label>Phone</label>
+    <input type="text" placeholder="Enter phone number" required>
+
+    <label>Amount</label>
+    <input type="number" placeholder="Enter amount" required>
+
+    <div class="buttons">
+      <button type="submit">💾 Save</button>
+      <button type="button" onclick="loadContent(this, 'customers/list')">⬅️ Cancel</button>
+    </div>
+  </form>
+</div>
+
+<script>
+document.getElementById('addCustomerForm').addEventListener('submit', (e) => {
+  e.preventDefault();
+  alert('Customer added successfully (demo only)');
+  loadContent(null, 'customers/list');
+});
+</script>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Records Dashboard</title>
+    <link rel="stylesheet" href="/css/gen_cust.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <div class="container">
+        <header class="header">
+            <div class="search-bar">
+                <i class="fas fa-search"></i>
+                <input type="text" id="searchInput" placeholder="Type here to search" onkeyup="filterTable()">
+            </div>
+            <button class="group-by-btn"><i class="fas fa-layer-group"></i> Group By</button>
+        </header>
+
+        <main class="table-section">
+            <table id="customerTable">
+                <thead>
+                    <tr>
+                        <th></th> <th>CCIN</th>
+                        <th>File No.</th>
+                        <th>Name</th>
+                        <th>Contact</th>
+                        <th>Verified</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr data-name="Joel Keli Wambua">
+                        <td>
+                            <i class="fas fa-magnifying-glass view-btn" onclick="openPage('view')"></i>
+                            <i class="fas fa-pen-to-square edit-btn" onclick="openPage('edit')"></i>
+                        </td>
+                        <td>CCIN00402</td>
+                        <td>11052042</td>
+                        <td>Joel Keli Wambua</td>
+                        <td>254721801562</td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td>10000</td>
+                        <td>S</td>
+                    </tr>
+                    <tr data-name="Bathlomew Oketch">
+                        <td>
+                            <i class="fas fa-magnifying-glass view-btn" onclick="openPage('view')"></i>
+                            <i class="fas fa-pen-to-square edit-btn" onclick="openPage('edit')"></i>
+                        </td>
+                        <td>CCIN00388</td>
+                        <td>11723348</td>
+                        <td>Bathlomew Oketch</td>
+                        <td>254722448694</td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td>10000</td>
+                        <td>S</td>
+                    </tr>
+                    <tr data-name="Derrick Nyaga Njeru">
+                        <td>
+                            <i class="fas fa-magnifying-glass view-btn" onclick="openPage('view')"></i>
+                            <i class="fas fa-pen-to-square edit-btn" onclick="openPage('edit')"></i>
+                        </td>
+                        <td>CCIN00401</td>
+                        <td>13253474</td>
+                        <td>Derrick Nyaga Njeru</td>
+                        <td>254728448060</td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td>20000</td>
+                        <td>S</td>
+                    </tr>
+                    <tr data-name="Faith Gakii Mati">
+                        <td>
+                            <i class="fas fa-magnifying-glass view-btn" onclick="openPage('view')"></i>
+                            <i class="fas fa-pen-to-square edit-btn" onclick="openPage('edit')"></i>
+                        </td>
+                        <td>CCIN00387</td>
+                        <td>23940609</td>
+                        <td>Faith Gakii Mati</td>
+                        <td>254726706759</td>
+                        <td><input type="checkbox" checked disabled></td>
+                        <td>30000</td>
+                        <td>S</td>
+                    </tr>
+                    </tbody>
+            </table>
+        </main>
+
+        <footer class="footer">
+            <div class="actions-left">
+                <button class="action-btn add-new-btn" onclick="openPage('add-new')">
+                    <i class="fas fa-plus-circle"></i> Add New
+                </button>
+                <button class="action-btn import-btn" onclick="openPage('import')">
+                    <i class="fas fa-upload"></i> Import
+                </button>
+            </div>
+            <div class="summary-right">
+                <span class="total-records">Total Records: **405**</span>
+                <span class="size-display">Size: **20**</span>
+                <div class="pagination-controls">
+                    <button>&lt;&lt;</button>
+                    <button>&lt;</button>
+                    <span>Pg 1 / 21</span>
+                    <button>&gt;</button>
+                    <button>&gt;&gt;</button>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Placeholder function to simulate opening new pages
+        function openPage(action) {
+            alert(`Placeholder: The '${action}' page would open here.`);
+            // In a real application, you would use:
+            // window.location.href = `${action}.html`;
+            // or use a client-side routing library/framework.
+        }
+
+        // Simple search/filter function
+        function filterTable() {
+            const input = document.getElementById('searchInput');
+            const filter = input.value.toUpperCase();
+            const table = document.getElementById('customerTable');
+            const tr = table.getElementsByTagName('tr');
+
+            // Start from 1 to skip the header row (tr[0])
+            for (let i = 1; i < tr.length; i++) {
+                let rowText = tr[i].textContent || tr[i].innerText;
+                if (rowText.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = '';
+                } else {
+                    tr[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

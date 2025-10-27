@@ -1,0 +1,74 @@
+#user-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+#user-table th, #user-table td {
+  border: 1px solid #ddd;
+  padding: 0.75rem;
+  text-align: left;
+}
+#user-table th {
+  background: #22d3ee;
+  color: #111827;
+}
+.view-btn {
+  background: #22d3ee;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.view-btn:hover {
+  background: #0ea5e9;
+}
+.btn-container {
+  text-align: right;
+  margin-top: 1rem;
+}
+#add-user-btn {
+  padding: 0.6rem 1rem;
+  background: #111827;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+#add-user-btn:hover {
+  background: #22d3ee;
+  color: #111827;
+}
+
+/* FORM STYLING */
+#user-form-container {
+  background: white;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+#user-form-container.hidden {
+  display: none;
+}
+#user-form label {
+  margin-top: 1rem;
+  display: block;
+  font-weight: 600;
+}
+#user-form input, #user-form select {
+  width: 100%;
+  padding: 0.6rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+#user-form button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+#user-form button.cancel {
+  background: #e11d48;
+  color: white;
+  margin-left: 1rem;
+}
